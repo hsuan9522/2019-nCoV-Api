@@ -6,23 +6,68 @@
 
   <body>
     <h1>2019-Covid Api</h1>
-    <p>
-      各國每日累積總數
-      <br />
-      <br />
-      將csv檔案轉為json格式
-      <a href="https://github.com/CSSEGISandData/COVID-19">Covid-19</a>
-      <br />
-      <br />
-      API URL:
-      <a
-        href="https://w5q6k.sse.codesandbox.io/api/v1/cumulative"
-        target="_blank"
-        >https://w5q6k.sse.codesandbox.io/api/v1/cumulative</a
-      >
-    </p>
-    Data Format:
-    <pre id="json"></pre>
+    將csv檔案轉為json格式
+    <a href="https://github.com/CSSEGISandData/COVID-19">Covid-19</a>
+    <br/>
+    <br/>
+    <div>
+      <p>
+        <h3>各國每日累積總數</h3>
+        <br />
+        API URL:
+        <a
+          href="https://w5q6k.sse.codesandbox.io/api/v1/cumulative"
+          target="_blank"
+          >https://w5q6k.sse.codesandbox.io/api/v1/cumulative</a
+        >
+      </p>
+      Data Format:
+      <pre id="json"></pre>
+    </div>
+    <div>
+      <p>
+        <h3>各國總確診人數/治癒人數/死亡人數</h3>
+        <br />
+        確診人數 API URL:
+        <a
+          href="https://w5q6k.sse.codesandbox.io/api/v1/confirmed"
+          target="_blank"
+          >https://w5q6k.sse.codesandbox.io/api/v1/confirmed</a
+        >
+        <br/>
+        治癒人數 API URL:
+        <a
+          href="https://w5q6k.sse.codesandbox.io/api/v1/recovered"
+          target="_blank"
+          >https://w5q6k.sse.codesandbox.io/api/v1/recovered</a
+        >
+        <br />
+        死亡人數 API URL:
+        <a
+          href="https://w5q6k.sse.codesandbox.io/api/v1/death"
+          target="_blank"
+          >https://w5q6k.sse.codesandbox.io/api/v1/death</a
+        >
+        <br/>
+        資料格式如下，差別只在key，Confirmed/ Recovered / Deaths
+      </p>
+      Data Format:
+      <pre id="confirmed"></pre>
+    </div>
+    <div>
+      <p>
+        <h3>各國各項人數</h3>
+        <br />
+        確診人數 API URL:
+        <a
+          href="https://w5q6k.sse.codesandbox.io/api/v1/all"
+          target="_blank"
+          >https://w5q6k.sse.codesandbox.io/api/v1/all</a
+        >
+      </p>
+      Data Format:
+      <pre id="all"></pre>
+    </div>
   </body>
 
   <script>
@@ -56,6 +101,42 @@
         "1/29/20": "2"
       }
     ];
+    let confirmed = [
+      {
+        "Province/State": "",
+        "Country/Region": "Afghanistan",
+        "Confirmed": "100"
+      },
+      {
+        "Province/State": "",
+        "Country/Region": "Albania",
+        Lat: "33",
+        Long: "65",
+        "Confirmed": "200"
+      }
+    ];
+    let all = [
+      {
+        "Province/State": "",
+        "Country/Region": "Afghanistan",
+        Lat: "33",
+        Long: "65",
+        "Confirmed": "100",
+        "Recovered": "100",
+        "Deaths": "10"
+      },
+      {
+        "Province/State": "",
+        "Country/Region": "Albania",
+        Lat: "33",
+        Long: "65",
+        "Confirmed": "200",
+        "Recovered": "100",
+        "Deaths": "10"
+      }
+    ];
     document.getElementById("json").innerHTML = JSON.stringify(data, null, 2);
+    document.getElementById("confirmed").innerHTML = JSON.stringify(confirmed, null, 2);
+    document.getElementById("all").innerHTML = JSON.stringify(all, null, 2);
   </script>
 </html>

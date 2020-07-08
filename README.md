@@ -22,9 +22,7 @@ API URL: [https://w5q6k.sse.codesandbox.io/api/v1/cumulative](https://w5q6k.sse.
     "1/26/20": "0",
     "1/27/20": "0",
     "1/28/20": "1",
-    "1/29/20": "1",
-    ...
-    ...
+    "1/29/20": "1"
   },
   {
     "Province/State": "",
@@ -38,12 +36,7 @@ API URL: [https://w5q6k.sse.codesandbox.io/api/v1/cumulative](https://w5q6k.sse.
     "1/26/20": "1",
     "1/27/20": "1",
     "1/28/20": "2",
-    "1/29/20": "2",
-    ...
-    ...
+    "1/29/20": "2"
   },
-  ...
-  ...
-  ...
 ]
 ```

@@ -23,6 +23,6 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 
-var listener = app.listen(3000, function() {
+var listener = app.listen(4000, function() {
   console.log("Listening on port " + listener.address().port);
 });
